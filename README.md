@@ -9,6 +9,7 @@ This application allows you to create users as well as thoughts. There is also t
 * Mongoose
 
 ## Walk Through Video
+https://youtu.be/RntSWaZhyQw
 
 
 ## Contribution
