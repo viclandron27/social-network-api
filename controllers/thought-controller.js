@@ -8,7 +8,7 @@ const thoughtController = {
             //     path: 'comments',
             //     select: '-__v'
             // })
-            // .select('-__v')
+            .select('-__v')
             .then(dbThoughtData => res.json(dbThoughtData))
             .catch(err => {
                 console.log(err);
@@ -85,7 +85,7 @@ const thoughtController = {
         Thought.findOneAndDelete({ _id: params.id })
         .then(({ _id }) => {
             return User.findOneAndUpdate(
-              { _id: params.id },
+              { _id: params.userId },
               { $pull: { thoughts: _id } },
               { new: true }
             );
