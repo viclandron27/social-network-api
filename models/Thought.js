@@ -14,12 +14,10 @@ const ThoughtSchema = new Schema(
             type: Date,
             default: Date.now
         },
-        username: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'User'
-            }
-        ],
+        username: {
+            type: String,
+            required: 'Username is required'
+        }
         // reactions: [reactionSchema]
     },
     {
